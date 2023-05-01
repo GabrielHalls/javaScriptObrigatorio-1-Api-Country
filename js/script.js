@@ -20,7 +20,8 @@ bnt.addEventListener("click",(e)=>{
         let bandeira = data[0].flags.svg
         let population = data[0].population
         let continents = data[0].continents
-        let currencies = data[0].currencies [Object.keys(data[0].currencies)].name  /* Estudar Object.keys - Priemeira vez usando */
+        let currencies = data[0].currencies [Object.keys(data[0].currencies)].name    /* Estudar Object.keys - Priemeira vez usando */
+        let common = data[0].name.common
 
 
         document.querySelector("#capital").innerHTML =`<b>Capital:</b> <i>${capital}</i>`
@@ -28,6 +29,7 @@ bnt.addEventListener("click",(e)=>{
         document.querySelector("#population").innerHTML = `<b>Population:</b> <i>${population}</i>`
         document.querySelector("#continent").innerHTML = `<b>Continent:</b> <i>${continents}</i>`
         document.querySelector("#currency").innerHTML = `<b>Currency:</b> <i>${currencies}</i>`
+        document.querySelector("#common").innerHTML = `<b>Common:</b> <i>${common}</i>`
     })
  }
 
