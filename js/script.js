@@ -15,8 +15,7 @@ bnt.addEventListener("click",(e)=>{
 
     })
     .then((data)=>{
-        console.log(data[0].altSpellings[1]);
-        console.log(data[0]);
+       
         const populacao = new Intl.NumberFormat()
         
     
@@ -28,8 +27,7 @@ bnt.addEventListener("click",(e)=>{
         let currencies = data[0].currencies [Object.keys(data[0].currencies)].name    /* Estudar Object.keys - Priemeira vez usando */
         let common = data[0].altSpellings[indexCommon]
         let flag = data[0].name.common
-/*         let languages = data[0].languages[Object.keys(data[0].languages)].name
- */        
+      
 
 
 
@@ -41,8 +39,7 @@ bnt.addEventListener("click",(e)=>{
         document.querySelector("#currency").innerHTML = `<b>Currency:</b> <i>${currencies}</i>`
         document.querySelector("#common").innerHTML = `<b>Common:</b> <i>${common}</i>`
         document.querySelector("#flag").innerHTML = ` ${flag}`
-/*         document.querySelector("#laguages").innerHTML = `<b>Laguages:</b> <i>${languages}</i>`
- */
+
     })
  }
 
