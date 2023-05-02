@@ -17,12 +17,13 @@ bnt.addEventListener("click",(e)=>{
     .then((data)=>{
         console.log(data[0].altSpellings[1]);
         console.log(data[0]);
+        const populacao = new Intl.NumberFormat()
         
     
         let indexCommon = data[0].altSpellings.length -1 
         let capital = data[0].capital[0]
         let bandeira = data[0].flags.svg
-        let population = data[0].population
+        let population = populacao.format(data[0].population)
         let continents = data[0].continents
         let currencies = data[0].currencies [Object.keys(data[0].currencies)].name    /* Estudar Object.keys - Priemeira vez usando */
         let common = data[0].altSpellings[indexCommon]
